@@ -1,0 +1,11 @@
+.catalog:
+  name: NginxWebServer
+  version: latest
+  uuid: NginxWebServer—0
+  questions:
+  - variable: HTTP_PORT
+    description: 'WebServer exposed port'
+    label: 'Port:'
+    required: true
+    default: 7000
+    type: int
