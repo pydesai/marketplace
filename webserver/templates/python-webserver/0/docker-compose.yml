@@ -1,4 +1,0 @@
-webserver:
-  image: <eg12777>/python-webserver:latest
-  ports:
-    - ${HTTP_PORT}:8000
