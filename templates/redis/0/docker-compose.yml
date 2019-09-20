@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  scadalts:
+    image: redis
+    ports:
+      - ${SCADALTS_PORT}:7777
+    command:
+      - "/root/start.sh"
+    restart: "${RESTART}"
+    network_mode: bridge
