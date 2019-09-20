@@ -7,7 +7,7 @@
     description: 'ScadaLTS exposed port'
     label: 'Port:'
     required: true
-    default: 7777
+    default: 6001
     type: int
   - variable: RESTART
     description: 'Application restart option: no, always, on-failure'
