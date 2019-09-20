@@ -4,5 +4,4 @@ web:
    - "8088:8088"
   links:
    - redis
-redis:
   image: redis
