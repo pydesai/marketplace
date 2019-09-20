@@ -1,4 +1,20 @@
-webserver:
-  image: mariadb
-  ports:
-    - ${HTTP_PORT}:8080
+
+
+services:
+  mysql:
+    image: mariadb
+    ports:
+      - ${MYSQL_PORT}:8088/tcp
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    restart: "${RESTART}"
+    volumes:
+      - mariadb-vol:/var/lib/mariadb
+    network_mode: bridge
+
+volumes:
+  mysqldb-vol:
+    driver: local
