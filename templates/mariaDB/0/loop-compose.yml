@@ -7,7 +7,7 @@
     description: 'MariaDB exposed port'
     label: 'Port:'
     required: true
-    default: 8808
+    default: 8088
     type: int
   - variable: Maria_DATABASE
     description: 'Maria database'
