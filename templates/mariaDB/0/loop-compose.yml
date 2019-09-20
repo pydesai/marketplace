@@ -1,0 +1,11 @@
+.catalog:
+  name: mariadb
+  version: latest
+  uuid: mariadb—0
+  questions:
+  - variable: HTTP_PORT
+    description: 'WebServer exposed port'
+    label: 'Port:'
+    required: true
+    default: 8080
+    type: int
