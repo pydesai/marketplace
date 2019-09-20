@@ -1,20 +1,15 @@
-
+version: '3.1'
 
 services:
-  mysql:
-    image: mariadb
-    ports:
-      - ${MYSQL_PORT}:8088/tcp
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-    restart: "${RESTART}"
-    volumes:
-      - mariadb-vol:/var/lib/mariadb
-    network_mode: bridge
 
-volumes:
-  mysqldb-vol:
-    driver: local
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8088:8088
