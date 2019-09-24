@@ -1,0 +1,35 @@
+.catalog:
+  name: MariaDB
+  version: latest
+  uuid: mariadb-0
+  questions:
+  - variable: MariaDB_PORT
+    description: 'MariaDB exposed port'
+    label: 'Port:'
+    required: true
+    default: 8088
+    type: int
+  - variable: Maria_DATABASE
+    description: 'Maria database'
+    label: 'Database:'
+    required: true
+    default: sample
+    type: string
+  - variable: MariaDB_USER
+    description: 'MariaDB user'
+    label: 'User:'
+    required: true
+    default: user
+    type: string
+  - variable: MySQL_ROOT_PASSWORD
+    description: 'MySQL root password'
+    label: 'MySQL password:'
+    required: true
+    default: loopedge-s3cr3t!
+    type: string
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string

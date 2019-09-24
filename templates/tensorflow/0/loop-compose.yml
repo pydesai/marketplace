@@ -1,0 +1,11 @@
+.catalog:
+  name: tensorflow
+  version: latest
+  uuid: tensorflow—0
+  questions:
+  - variable: HTTP_PORT
+    description: 'WebServer exposed port'
+    label: 'Port:'
+    required: true
+    default: 8082
+    type: int

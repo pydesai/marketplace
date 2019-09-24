@@ -1,0 +1,11 @@
+.catalog:
+  name: Redis
+  version: latest
+  uuid: Redis-0
+  questions:
+  - variable: SCADALTS_PORT
+    description: 'ScadaLTS exposed port'
+    label: 'Port:'
+    required: true
+    default: 8088
+    type: int

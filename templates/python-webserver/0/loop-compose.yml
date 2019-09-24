@@ -1,0 +1,11 @@
+.catalog:
+  name: Python-WebServer
+  version: latest
+  uuid: python-webserver?0
+  questions:
+  - variable: HTTP_PORT
+    description: 'WebServer exposed port'
+    label: 'Port:'
+    required: true
+    default: 8000
+    type: int
