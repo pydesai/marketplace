@@ -2,7 +2,7 @@ version: "2"
 
 services:
   python:
-    image: python:3.8.0b4-buster
+    image: python:3.6.9-buster
     restart: "${RESTART}"
     stdin_open: true
     tty: true
