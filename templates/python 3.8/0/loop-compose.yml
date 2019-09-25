@@ -1,0 +1,17 @@
+.catalog:
+  name: Python
+  version: 3.8.0b4-buster
+  uuid: python-0
+  questions:
+  - variable: WORKDIR
+    description: 'Python project working directory'
+    label: 'Python Workdir:'
+    required: true
+    default: "~/"
+    type: string
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string

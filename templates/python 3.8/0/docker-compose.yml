@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  python:
+    image: python:3.8.0b4-buster
+    restart: "${RESTART}"
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${WORKDIR}:/root/project
+    network_mode: bridge
