@@ -7,5 +7,5 @@
     description: 'ScadaLTS exposed port'
     label: 'Port:'
     required: true
-    default: 8088
+    default: 6060
     type: int
