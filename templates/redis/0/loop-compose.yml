@@ -3,8 +3,8 @@
   version: latest
   uuid: Redis-0
   questions:
-  - variable: SCADALTS_PORT
-    description: 'ScadaLTS exposed port'
+  - variable: HTTP_PORT
+    description: 'HTTP_port'
     label: 'Port:'
     required: true
     default: 6060

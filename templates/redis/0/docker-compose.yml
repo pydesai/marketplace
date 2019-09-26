@@ -1,12 +1,9 @@
-version: '2'
-services:
-  redis:
-    build: .
-    ports:
-    - "${HTTP_PORT}:6060"
-    volumes:
-    - .:/code
-    - logvolume01:/var/log
-    links:
-    - redis
+redis:
+    container_name: redis
     image: redis
+    ports:
+      - "${HTTP_PORT}:6379"
+    volumes:
+      - ../data/redis:/data
+    entrypoint: redis-server --appendonly yes
+    restart: always
