@@ -1,4 +1,4 @@
 webserver:
-  image: eg12777/nginxserver:latest
+  image: nginx
   ports:
     - ${HTTP_PORT}:7000
