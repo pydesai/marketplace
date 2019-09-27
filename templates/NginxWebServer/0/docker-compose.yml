@@ -1,4 +1,4 @@
 webserver:
   image: nginx
   ports:
-    - ${HTTP_PORT}:7000
+    - ${HTTP_PORT}:6543
