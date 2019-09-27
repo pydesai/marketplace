@@ -1,3 +1,11 @@
-service:
-  image: eg12777/java
-  
+version: '2'
+
+services:
+  java:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: eg12777/java
+    command: ["tail", "-f", "/dev/null"] # To keep the container running
+    ports:
+      - 7777:7777
+    volumes:
+      - .:/app
