@@ -2,10 +2,4 @@
   name: java8
   version: latest
   uuid: java8—0
-  questions:
-  - variable: HTTP_PORT
-    description: 'WebServer exposed port'
-    label: 'Port:'
-    required: true
-    default: 7000
-    type: int
+  
