@@ -3,7 +3,7 @@ version: '2'
 services:
   java:
     container_name: loginJava
-    image: openjdk:7
+    image: eg12777/java
     depends_on:
     - db
     volumes:
