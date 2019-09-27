@@ -2,10 +2,11 @@ version: '2'
 
 services:
   java:
-    tty: true # Enables debugging capabilities when attached to this container.
-    image: eg12777/java
-    command: ["tail", "-f", "/dev/null"] # To keep the container running
-    ports:
-      - 7777:7777
+    container_name: loginJava
+    image: openjdk:7
+    depends_on:
+    - db
     volumes:
-      - .:/app
+    - ./home/crismon-01/Documenti/TESI/Docker/mysqlLogin:/usr/src/myapp 
+    working_dir: /usr/src/myapp
+    command: bash -c "java -jar LogiIn.jar"
