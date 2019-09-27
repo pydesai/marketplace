@@ -2,4 +2,4 @@ version: '2'
 webserver:
   image: nginx
   ports:
-    - ${HTTP_PORT}:6543
+    - ${HTTP_PORT}:80
