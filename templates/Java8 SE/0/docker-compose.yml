@@ -4,8 +4,6 @@ services:
   java:
     container_name: loginJava
     image: eg12777/java
-    depends_on:
-    - db
     volumes:
     - ./home/crismon-01/Documenti/TESI/Docker/mysqlLogin:/usr/src/myapp 
     working_dir: /usr/src/myapp
