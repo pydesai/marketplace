@@ -1,5 +1,0 @@
-version: '2.1'
-services:
-  mariadb:
-    image: eg12777/mooonjong
-    
