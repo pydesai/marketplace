@@ -1,0 +1,41 @@
+.catalog:
+  name: WordPress
+  version: latest
+  uuid: WordPress-0
+  questions:
+  - variable: WORDPRESS_PORT
+    description: 'WordPress exposed port'
+    label: 'Port:'
+    required: true
+    default: 8008
+    type: int
+  - variable: DB_NAME
+    description: 'Mysql database'
+    label: 'Database:'
+    required: true
+    default: sample
+    type: string
+  - variable: USERNAME
+    description: 'Mysql user'
+    label: 'User:'
+    required: true
+    default: user
+    type: string
+  - variable: USERPASSWD
+    description: 'MySQL root password'
+    label: 'MySQL password:'
+    required: true
+    default: loopedge-s3cr3t!
+    type: string
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string
+  - variable: RESTART_DB
+    description: 'MySQL Database restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string
