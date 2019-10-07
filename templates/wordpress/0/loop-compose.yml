@@ -9,17 +9,17 @@
     required: true
     default: 8008
     type: int
+  - variable: MYSQL_PORT
+    description: 'MySQL exposed port'
+    label: 'Port:'
+    required: true
+    default: 3306
   - variable: DB_NAME
     description: 'Mysql database'
     label: 'Database:'
     required: true
     default: sample
     type: string
-  - variable: MYSQL_PORT
-    description: 'MySQL exposed port'
-    label: 'Port:'
-    required: true
-    default: 3306
   - variable: USERNAME
     description: 'Mysql user'
     label: 'User:'
