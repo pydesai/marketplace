@@ -9,12 +9,12 @@
     required: true
     default: 8008
     type: int
-  - variable: MYSQL_PORT
-    description: 'MySQL exposed port'
-    label: 'Port:'
-    required: true
-    default: 3306
-    type: int
+#  - variable: MYSQL_PORT
+#    description: 'MySQL exposed port'
+#    label: 'Port:'
+#    required: true
+#    default: 3306
+#    type: int
   - variable: DB_NAME
     description: 'Mysql database'
     label: 'Database:'
@@ -39,9 +39,9 @@
     required: true
     default: "always"
     type: string
-  - variable: RESTART_DB
-    description: 'MySQL Database restart option: no, always, on-failure'
-    label: 'Restart:'
-    required: true
-    default: "always"
-    type: string
+#  - variable: RESTART_DB
+#    description: 'MySQL Database restart option: no, always, on-failure'
+#    label: 'Restart:'
+#    required: true
+#    default: "always"
+#    type: string
