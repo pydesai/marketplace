@@ -2,18 +2,19 @@
 
 services:
   database:
-   image: emperer989/get-started:11g
-   shm_size: 2g
+   image: daggerok/oracle:xe
+   shm_size: 1g
    environment:
      - TZ=Asia/Seoul
      - ORACLE_ALLOW_REMOTE=true
      - ORACLE_PDB=${DB_NAME}
      - ORACLE_SID=${DB_SID}
      - ORACLE_PWD=${PASSWD}
+     - ORACLE_CHARACTERSET=AL32UTF8
    ports:
      - ${DB_PORT}:1521
      - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
    volumes:
-     - oracle_data:/u01/app/oracle
+     - ./oracle_data:/u01/app/oracle
