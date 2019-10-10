@@ -4,7 +4,7 @@
   uuid: Oraclexe-0
   questions:
   - variable: DB_NAME
-    description: 'Mysql database'
+    description: 'Oracle database'
     label: 'Database:'
     required: true
     default: sample
