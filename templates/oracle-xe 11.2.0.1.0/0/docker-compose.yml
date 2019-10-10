@@ -2,7 +2,7 @@
 
 services:
   database:
-   image: daggerok/oracle:xe
+   image: oracle/database:11.2.0.2-xe
    shm_size: 1g
    environment:
      - TZ=Asia/Seoul
@@ -11,8 +11,11 @@ services:
      - ORACLE_SID=${DB_SID}
      - ORACLE_PWD=${PASSWD}
      - ORACLE_CHARACTERSET=AL32UTF8
+     - ORACLE_DISABLE_ASYNCH_IO=true
    ports:
      - ${DB_PORT}:1521
      - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
+   volumes:
+    - .oracle/data:/u01/app/oracle/oradata
