@@ -12,7 +12,7 @@ services:
      - ORACLE_PWD=${PASSWD}
    ports:
      - ${DB_PORT}:1521
-     - ${HTTP_PORT}8080
+     - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
    volumes:
