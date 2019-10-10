@@ -16,5 +16,3 @@ services:
      - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
-   volumes:
-     - ./oracle_data:/u01/app/oracle
