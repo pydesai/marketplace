@@ -2,7 +2,7 @@
 
 services:
   database:
-   image: oracle/database:11.2.0.2-xe
+   image: jaspeen/oracle-11g
    shm_size: 1g
    environment:
      - TZ=Asia/Seoul
