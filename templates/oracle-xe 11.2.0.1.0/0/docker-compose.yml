@@ -18,6 +18,7 @@ services:
    restart: "${RESTART}"
    network_mode: bridge
    volumes:
-    - .oracle/data:/u01/app/oracle/oradata
-    - .oracle/scripts/startup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
-    - .oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
+    - home/oracle/data:/u01/app/oracle/oradata
+    - home/oracle/scripts/starup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
+    - home/oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
+
