@@ -3,6 +3,12 @@
 This template creates a oracle XE database.
 
 ## Usage
+**IMPORTANT:** The resulting images will be an image with the Oracle binaries installed. On first startup of the container a new database will be created, the following lines highlight when the database is ready to be used:
+
+    #########################
+	DATABASE IS READY TO USE!
+	#########################
+
 
 There are two ports that are exposed in this image:
 * 1521 which is the port to connect to the Oracle Database.
