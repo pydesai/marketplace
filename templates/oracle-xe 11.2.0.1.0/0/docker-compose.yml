@@ -8,7 +8,7 @@ services:
      - TZ=Asia/Seoul
      - ORACLE_ALLOW_REMOTE=true
 #     - ORACLE_PDB=${DB_NAME}
-     - ORACLE_SID=xe
+#     - ORACLE_SID=xe
      - ORACLE_PWD=${PASSWD}
      - ORACLE_CHARACTERSET=AL32UTF8
      - ORACLE_DISABLE_ASYNCH_IO=true
@@ -19,3 +19,5 @@ services:
    network_mode: bridge
    volumes:
     - .oracle/data:/u01/app/oracle/oradata
+    - .oracle/scripts/startup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
+    - .oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
