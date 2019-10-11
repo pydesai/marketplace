@@ -1,4 +1,4 @@
-name: nginxserver
-description: Simple Web Server with Nginx
+name: ubuntu
+description: ubuntu image in quay.io repository
 category: Programming
 version: 1
