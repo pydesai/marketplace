@@ -5,20 +5,20 @@ services:
    image: emperer989/get-started:11.2.0.2-xe
    shm_size: 1g
    environment:
-     - TZ=Asia/Seoul
-     - ORACLE_ALLOW_REMOTE=true
+#     - TZ=Asia/Seoul
+#     - ORACLE_ALLOW_REMOTE=true
 #     - ORACLE_PDB=${DB_NAME}
 #     - ORACLE_SID=xe
      - ORACLE_PWD=${PASSWD}
-     - ORACLE_CHARACTERSET=AL32UTF8
-     - ORACLE_DISABLE_ASYNCH_IO=true
+#     - ORACLE_CHARACTERSET=AL32UTF8
+#     - ORACLE_DISABLE_ASYNCH_IO=true
    ports:
      - ${DB_PORT}:1521
      - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
    volumes:
-     - /home/oracle/data:/u01/app/oracle/oradata
-     - /home/oracle/scripts/startup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
-     - /home/oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
+     - .oracle/data:/u01/app/oracle/oradata
+     - .oracle/scripts/startup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
+     - .oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
 
