@@ -2,7 +2,7 @@
 
 services:
   database:
-   image: wnameless/oracle-xe-11g-r2
+   image: emperer989/get-started:11.2.0.2-xe
    shm_size: 1g
    environment:
      - TZ=Asia/Seoul
