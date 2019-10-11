@@ -3,18 +3,6 @@
   version: 11.2.0.1.0
   uuid: Oraclexe-0
   questions:
-  - variable: DB_NAME
-    description: 'Oracle database'
-    label: 'Database:'
-    required: true
-    default: sample
-    type: string
-  - variable: DB_SID
-    description: 'Oracle SID'
-    label: 'SID:'
-    required: true
-    default: xe
-    type: string
   - variable: PASSWD
     description: 'Oracle root password'
     label: 'password:'
@@ -22,20 +10,20 @@
     default: loopedge-s3cr3t!
     type: string
   - variable: DB_PORT
-    description: 'Oracle DB exposed port'
+    description: 'Oracle TNS Listener exposed port'
     label: 'Port:'
     required: true
     default: 1521
     type: int
   - variable: HTTP_PORT
-    description: 'Oracle TNS HTTP exposed port'
+    description: 'Oracle HTTP (APEX) exposed port'
     label: 'Port:'
     required: true
     default: 8080
     type: int
   - variable: RESTART
-    description: 'Application restart option: no, always, on-failure'
+    description: 'Application restart option: no, always, on-failure, unless-stopped'
     label: 'Restart:'
     required: true
-    default: "unless-stopped"
+    default: "always"
     type: string

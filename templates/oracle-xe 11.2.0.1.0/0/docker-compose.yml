@@ -7,8 +7,8 @@ services:
    environment:
      - TZ=Asia/Seoul
      - ORACLE_ALLOW_REMOTE=true
-     - ORACLE_PDB=${DB_NAME}
-     - ORACLE_SID=${DB_SID}
+#     - ORACLE_PDB=${DB_NAME}
+     - ORACLE_SID=xe
      - ORACLE_PWD=${PASSWD}
      - ORACLE_CHARACTERSET=AL32UTF8
      - ORACLE_DISABLE_ASYNCH_IO=true
