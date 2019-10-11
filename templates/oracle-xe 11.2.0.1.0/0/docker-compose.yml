@@ -17,8 +17,5 @@ services:
      - ${HTTP_PORT}:8080
    restart: "${RESTART}"
    network_mode: bridge
-   volumes:
-     - .oracle/data:/u01/app/oracle/oradata
-     - .oracle/scripts/startup:/u01/app/oracle/scripts/startup | /docker-entrypoint-initdb.d/startup
-     - .oracle/scripts/setup:/u01/app/oracle/scripts/setup | /docker-entrypoint-initdb.d/setup
+
 
