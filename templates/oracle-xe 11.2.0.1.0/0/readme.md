@@ -19,5 +19,5 @@ The password for those accounts can be changed via the **docker exec** command.
 
 Once the container has been started you can connect to it just like to any other database:
 
-*sqlplus sys/<your password>@//localhost:1521/XE as sysdba
-sqlplus system/<your password>@//localhost:1521/XE*
+*sqlplus sys/<your password>@//localhost:1521/XE as sysdba*
+*sqlplus system/<your password>@//localhost:1521/XE*
