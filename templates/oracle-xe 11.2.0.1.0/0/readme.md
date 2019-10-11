@@ -1,4 +1,4 @@
-# Oracle Express Edtion 11g
+# Oracle Express Edition 11g
 
 This template creates a oracle XE database.
 
