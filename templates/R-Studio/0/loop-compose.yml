@@ -16,8 +16,8 @@
     default: rstudio1
     type: string
  - variable: R_UESRID
-    description: 'R studio password'
-    label: 'R studio password:'
+    description: 'R studio userid'
+    label: 'R studio userid:'
     required: true
-    default: rstudio
+    default: LoopEdge
     type: string
