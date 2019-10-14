@@ -5,6 +5,6 @@ services:
       - USER=rstudio
       - PASSWORD=${R_PASSWORD}
       - MY_VAR=1
-    image: "rocker/rstudio:3.6.1"
+    image: "rocker/tidyverse"
     ports:
      - ${R_PORT}:8787
