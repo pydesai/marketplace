@@ -15,4 +15,9 @@
     required: true
     default: rstudio1
     type: string
- 
+ - variable: R_UESRID
+    description: 'R studio password'
+    label: 'R studio password:'
+    required: true
+    default: rstudio
+    type: string
