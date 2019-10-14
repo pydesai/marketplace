@@ -1,36 +1,59 @@
-version: '2'
+version: "3.6"
 
 services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    restart: on-failure
+    networks:
+      - net
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    ports:
+      - 80:80
+      - 443:443
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    restart: on-failure
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
   rstudio:
-    image: rocker/rstudio:3.6.1
-    build:
-      context: .
+    image: rocker/tidyverse:3.6.0
+    container_name: rstudio
+    restart: on-failure
+    volumes:
+      - type: volume
+        source: rstudio
+        target: /home/rstudio
+        volume:
+          no-copy: true
+      - type: bind
+        source: ./projects
+        target: /home/rstudio/projects
+      - type: volume
+        source: r_libs
+        target: /usr/local/lib/R
+        volume:
+          no-copy: true
+    networks:
+      - net
     environment:
-      USER: rstudio
-      PASSWORD: ${R_PASSWORD}
-      ROOT: "FALSE"
-    volumes:
-      - path/to/workspace:/home/rstudio
-    ports:
-      - "${R_PORT}:8787"
-    networks:
-      - R
-  
-  rshiny:
-    image: rocker/shiny
-    volumes:
-      - path/to/workspace:/srv/shiny-server
-      - /var/logs/shiny:/var/log/shiny-server
-    ports:
-      - "3838:3838"
-    networks:
-      - R
-    restart: unless-stopped
+      - PASSWORD=${R_PASSWORD}
+    expose:
+      - ${R_PORT}
 
 networks:
-  R:
-    driver: bridge
-© 2019 GitHub, Inc.    
+  tki-net:
+    name: net
 
-  
+volumes:
+  r_libs:
+  rstudio:

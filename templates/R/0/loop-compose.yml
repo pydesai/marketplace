@@ -13,5 +13,6 @@
     description: 'R studio password'
     label: 'R studio password:'
     required: true
+    default: rstudio1
     type: string
  
