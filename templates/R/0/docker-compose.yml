@@ -6,7 +6,6 @@ services:
     image: rocker/rstudio:3.6.1
     build:
       context: .
-      dockerfile: rstudio.Dockerfile
     environment:
       USER: rstudio
       PASSWORD: ${R_PASSWORD}
