@@ -1,28 +1,10 @@
-version: "2"
-
+version: '2'
 services:
-
   rstudio:
-    image: rocker/rstudio:3.6.1
-    container_name: rstudio
-    restart: on-failure
-    volumes:
-      - type: volume
-        source: rstudio
-        target: /home/rstudio
-        volume:
-          no-copy: true
-      - type: bind
-        source: ./projects
-        target: /home/rstudio/projects
-      - type: volume
-        source: r_libs
-        target: /usr/local/lib/R
-        volume:
-          no-copy: true
-    networks:
-      - net
     environment:
+      - USER=rstudio
       - PASSWORD=${R_PASSWORD}
-    expose:
-      - ${R_PORT}
+      - MY_VAR=1
+    image: "rocker/rstudio:3.6.1"
+    ports:
+     - ${R_PORT}:8787
