@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  rstudio:
+    image: rocker/rstudio:3.6.1
+    build:
+      context: .
+      dockerfile: rstudio.Dockerfile
+    environment:
+      USER: rstudio
+      PASSWORD: ${R_PASSWORD}
+      ROOT: "FALSE"
+    volumes:
+      - path/to/workspace:/home/rstudio
+    ports:
+      - "${R_PORT}:8787"
+    networks:
+      - R
+
+  
