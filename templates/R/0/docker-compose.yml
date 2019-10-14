@@ -1,0 +1,10 @@
+version: '2'
+services:
+  rstudio:
+    environment:
+      - USER=${R_USERID}
+      - PASSWORD=${R_PASSWORD}
+      - MY_VAR=1
+    image: "rocker/rstudio:3.6.1"
+    ports:
+     - ${R_PORT}:8787
