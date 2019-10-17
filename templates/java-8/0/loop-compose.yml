@@ -1,7 +1,7 @@
 .catalog:
   name: java
-  version: 3.8.0b4-buster
-  uuid: python-0
+  version: 1.8.0.201
+  uuid: java-0
   questions:
   - variable: WORKDIR
     description: 'java project working directory'
