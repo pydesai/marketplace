@@ -1,0 +1,11 @@
+﻿version: "2"
+
+services:
+  database:
+   image: grafana/grafana
+   ports:
+     - ${HTTP_PORT}:3000
+   restart: "${RESTART}"
+   network_mode: bridge
+
+
