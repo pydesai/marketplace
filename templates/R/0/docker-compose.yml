@@ -2,7 +2,7 @@ version: '2'
 services:
   rstudio:
     environment:
-      - USER=rstudio
+      - USER=${USER_NAME}
       - PASSWORD=${R_PASSWORD}
       - MY_VAR=1
     image: "rocker/tidyverse"
