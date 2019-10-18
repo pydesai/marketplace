@@ -1,0 +1,29 @@
+.catalog:
+  name: ThingsBoard
+  version: latest
+  uuid: ThingsBoard-0
+  questions:
+  - variable: TB_PORT
+    description: 'HTTP exposed port'
+    label: 'Port:'
+    required: true
+    default: 9090
+    type: int
+  - variable: ES_PORT
+    description: 'MQTT exposed port'
+    label: 'Port:'
+    required: true
+    default: 1883
+    type: int
+  - variable: COAP_PORT
+    description: 'Cassandra exposed port'
+    label: 'Port:'
+    required: true
+    default: 5683
+    type: int
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string
