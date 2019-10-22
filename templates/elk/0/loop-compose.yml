@@ -29,7 +29,7 @@
     type: string
   - variable: MAX_MAP_COUNT
     description: setting maximun docker virtual memory size
-    label: 'Port:'
+    label: 'Memory:'
     required: true
     default: 262144
     type: int
