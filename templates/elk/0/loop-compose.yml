@@ -27,7 +27,7 @@
     required: true
     default: "always"
     type: string
-    - variable: MAX_MAP_COUNT
+  - variable: MAX_MAP_COUNT
     description: setting maximun docker virtual memory size
     label: 'Port:'
     required: true
