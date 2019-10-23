@@ -6,7 +6,7 @@ services:
     environment:
       - cluster.name=docker-cluster
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-      - MAX_MAP_COUNT=262144
+      - MAX_MAP_COUNT=${MAX_MAP_COUNT}
       - m=4g
     volumes:
       - elk-vol:/usr/share/elk/data
