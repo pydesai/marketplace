@@ -3,13 +3,8 @@ version: "2"
 services:
   prometheus:
    image: prom/prometheus
-   volumes:
-     - prom-vol: /prometheus-data
    ports:
      - ${HTTP_PORT}:9090
    restart: "${RESTART}"
    network_mode: bridge
 
-volumes:
-  prom-vol:
-    driver: local
