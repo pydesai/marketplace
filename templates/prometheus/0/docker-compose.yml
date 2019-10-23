@@ -1,12 +1,10 @@
-version: "3.7"
+version: "2"
 
 services:
   prometheus:
    image: prom/prometheus
    volumes:
      - prom-vol: /prometheus-data
-   configs:
-     - prom-configs
    ports:
      - ${HTTP_PORT}:9090
    restart: "${RESTART}"
@@ -15,6 +13,3 @@ services:
 volumes:
   prom-vol:
     driver: local
-configs:
-  prom-configs:
-    file: /prometheus-data/prometheus.yml
