@@ -1,6 +1,6 @@
 ﻿.catalog:
   name: Grafana
-  version: 6.4b1
+  version: latest
   uuid: Grafana-0
   questions:
   - variable: ROOT_URL
