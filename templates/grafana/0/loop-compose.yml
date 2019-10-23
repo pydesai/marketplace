@@ -3,6 +3,18 @@
   version: 6.4b1
   uuid: Grafana-0
   questions:
+  - variable: ROOT_URL
+    description: 'Grafana HTTP Bind URL Address'
+    label: 'URL:'
+    required: true
+    default: "http://grafana.server.loopedge"
+    type: string
+  - variable: PASSWD
+    description: 'Grafana Admin Passwword'
+    label: 'Password:'
+    required: true
+    default: "admin"
+    type: string
   - variable: HTTP_PORT
     description: 'Grafana HTTP exposed port'
     label: 'Port:'

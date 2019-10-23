@@ -1,8 +1,12 @@
 ﻿version: "2"
 
 services:
-  database:
+  grafana:
    image: grafana/grafana
+   environment:
+     - GF_INSTALL_PLUGINS=natel-plotly-panel,snuids-radar-panel,jdbranham-diagram-panel,agenty-flowcharting-panel,corpglory-progresslist-panel,briangann-datatable-panel,scadavis-synoptic-panel
+     - GF_SERVER_ROOT_URL=${ROOT_URL}
+     - GF_SECURITY_ADMIN_PASSWORD=${PASSWD}
    ports:
      - ${HTTP_PORT}:3000
    restart: "${RESTART}"
