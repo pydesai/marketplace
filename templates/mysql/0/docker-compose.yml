@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+  mysql:
+    image: mysql:5.7.22
+    ports:
+      - ${MYSQL_PORT}:3306/tcp
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - TZ=${MYSQL_TIMEZONE}
+    restart: "${RESTART}"
+    volumes:
+      - mysqldb-vol:/var/lib/mysql
+    network_mode: bridge
+
+volumes:
+  mysqldb-vol:
+    driver: local
