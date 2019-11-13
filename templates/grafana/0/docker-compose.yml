@@ -3,6 +3,7 @@
 services:
   grafana:
    image: grafana/grafana
+   user: ${ROOT_USER}
    environment:
      - GF_INSTALL_PLUGINS=natel-plotly-panel,snuids-radar-panel,jdbranham-diagram-panel,agenty-flowcharting-panel,corpglory-progresslist-panel,briangann-datatable-panel,scadavis-synoptic-panel,grafana-clock-panel,marcuscalidus-svg-panel
      - GF_SERVER_ROOT_URL=${ROOT_URL}
