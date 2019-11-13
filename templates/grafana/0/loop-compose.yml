@@ -9,6 +9,12 @@
     required: true
     default: "http://grafana.server.loopedge"
     type: string
+  - variable: ROOT_USER
+    description: 'Grafana Super User Name'
+    label: 'Name:'
+    required: true
+    default: "root"
+    type: string
   - variable: PASSWD
     description: 'Grafana Admin Passwword'
     label: 'Password:'
