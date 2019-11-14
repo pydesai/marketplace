@@ -5,9 +5,9 @@ services:
    image: grafana/grafana:master
    user: ${ROOT_USER}
    environment:
-     - GF_INSTALL_PLUGINS=natel-plotly-panel,snuids-radar-panel,jdbranham-diagram-panel,agenty-flowcharting-panel,corpglory-progresslist-panel,briangann-datatable-panel,scadavis-synoptic-panel,grafana-clock-panel,marcuscalidus-svg-panel
-     - GF_SERVER_ROOT_URL=${ROOT_URL}
-     - GF_SECURITY_ADMIN_PASSWORD=${PASSWD}
+     - GF_INSTALL_PLUGINS : natel-plotly-panel,snuids-radar-panel,jdbranham-diagram-panel,agenty-flowcharting-panel,corpglory-progresslist-panel,briangann-datatable-panel,scadavis-synoptic-panel,grafana-clock-panel,marcuscalidus-svg-panel
+     - GF_SERVER_ROOT_URL : ${ROOT_URL}
+     - GF_SECURITY_ADMIN_PASSWORD : ${PASSWD}
      - GF_RENDERING_SERVER_URL: http://renderer:8081/render
      - GF_RENDERING_CALLBACK_URL: http://grafana:3000/
      - GF_LOG_FILTERS: rendering:debug
