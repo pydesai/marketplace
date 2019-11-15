@@ -11,5 +11,5 @@ services:
    ports:
      - ${HTTP_PORT}:3000
    restart: "${RESTART}"
-   network_mode: bridgg
+   network_mode: bridge
 
