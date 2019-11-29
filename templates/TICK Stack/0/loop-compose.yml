@@ -1,0 +1,17 @@
+.catalog:
+  name: TICK Stack
+  version: 1.7-alpine
+  uuid: TICK Stack-0
+#  questions:
+#  - variable: HTTP_PORT
+#    description: 'Prometheus HTTP exposed port'
+#    label: 'Port:'
+#    required: true
+#    default: 9090
+#    type: int
+#  - variable: RESTART
+#    description: 'Application restart option: no, always, on-failure, unless-stopped'
+#    label: 'Restart:'
+#    required: true
+#    default: "always"
+#    type: string
