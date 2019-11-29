@@ -37,7 +37,7 @@
     description: 'timezone'
     label: 'time_zone:'
     required: true
-    default: Aisa/Seoul
+    default: Asia/Seoul
     type: string
   - variable: RESTART
     description: 'Application restart option: no, always, on-failure'
