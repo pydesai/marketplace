@@ -2,13 +2,38 @@
   name: TICK Stack
   version: 1.7-alpine
   uuid: TICK Stack-0
-#  questions:
-#  - variable: HTTP_PORT
-#    description: 'Prometheus HTTP exposed port'
-#    label: 'Port:'
-#    required: true
-#    default: 9090
-#    type: int
+  questions:
+  - variable: INFLUX_DB_PORT
+    description: 'Influx DB HTTP exposed port.In the LoopEdge, You should be change this port.'
+    label: 'Port:'
+    required: true
+    default: 8086
+    type: int
+  - variable: INFLUX_ADMIN_PORT
+    description: 'Influx DB admin interface exposed port'
+    label: 'Port:'
+    required: true
+    default: 8082
+    type: int
+  - variable: INFLUX_UDP_PORT
+    description: 'Influx DB udp port'
+    label: 'Port:'
+    required: true
+    default: 8089
+    type: int
+  - variable: KAPACITOR_PORT
+    description: 'Kapacitor HTTP exposed port'
+    label: 'Port:'
+    required: true
+    default: 9092
+    type: int
+  - variable: CHRONOGRAF_PORT
+    description: 'Chronograf WebUI HTTP exposed port'
+    label: 'Port:'
+    required: true
+    default: 8888
+    type: int
+
 #  - variable: RESTART
 #    description: 'Application restart option: no, always, on-failure, unless-stopped'
 #    label: 'Restart:'
