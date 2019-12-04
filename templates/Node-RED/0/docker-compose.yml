@@ -3,6 +3,7 @@ version: "2"
 services:
   node-red:
     image: nodered/node-red:latest
+    restart: always
     environment:
       - TZ=${NODE_RED_TIMEZONE}
     ports:
@@ -10,4 +11,5 @@ services:
     network_mode: bridge
     volumes:
       - ${USER_DATA}:/data
+    user: root:root
 
