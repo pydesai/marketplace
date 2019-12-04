@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    ports:
+      - ${MQTT_PORT}:1883
+      - ${WEBSOCKET_PORT}:9001
+    restart: "${RESTART}"
+    volumes:
+      - mosquitto-conf:/mosquitto/config/mosquitto.conf
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+    network_mode: bridge
+
+volumes:
+  mosquitto-conf:
+    driver: local
+  mosquitto-data:
+    driver: local
+  mosquitto-log:
+    driver: local
+

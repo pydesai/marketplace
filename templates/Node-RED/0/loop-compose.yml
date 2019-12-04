@@ -1,0 +1,23 @@
+.catalog:
+  name: mosquitto
+  version: latest
+  uuid: mosquitto-0
+  questions:
+  - variable: NODE_RED_TIMEZONE
+    description: 'timezone'
+    label: 'time_zone:'
+    required: true
+    default: Asia/Seoul
+    type: string
+  - variable: NODE_RED_PORT
+    description: 'Node-RED exposed port'
+    label: 'Port:'
+    required: true
+    default: 1880
+    type: int
+  - variable: USER_DATA
+    description: 'Set a directory to store Node-RED user configuration data (Node,Flows,etc.)'
+    label: 'user data:'
+    required: true
+    default: "~/node-red/data"
+    type: string
