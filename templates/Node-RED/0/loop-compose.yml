@@ -15,6 +15,12 @@
     required: true
     default: 1880
     type: int
+  - variable: MQTT_PORT
+    description: 'Mqtt port'
+    label: 'Port:'
+    required: true
+    default: 1883
+    type: int
   - variable: USER_DATA
     description: 'Set a directory to store Node-RED user configuration data (Node,Flows,etc.)'
     label: 'user data:'
