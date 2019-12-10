@@ -6,8 +6,12 @@ services:
       - ${MariaDB_PORT}:3306/tcp
     restart: 'no'
     environment:
+<<<<<<< HEAD
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_USER = ${MYSQL_USER}
+=======
+      - MYSQL_ROOT_PASSWORD=${MySQL_ROOT_PASSWORD}
+>>>>>>> 213caa64b0370ac10e2e541548dcf99e5398d53c
     volumes:
 	mysqldb-vol:
           - /my/custom:/etc/mysql/conf.d

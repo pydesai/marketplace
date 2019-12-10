@@ -7,5 +7,5 @@
     description: 'WebServer exposed port'
     label: 'Port:'
     required: true
-    default: 7000
+    default: 6543
     type: int

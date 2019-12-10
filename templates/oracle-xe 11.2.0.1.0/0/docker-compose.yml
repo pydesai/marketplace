@@ -1,0 +1,21 @@
+﻿version: "2"
+
+services:
+  database:
+   image: emperer989/get-started:11.2.0.2-xe
+   shm_size: 1g
+   environment:
+#     - TZ=Asia/Seoul
+#     - ORACLE_ALLOW_REMOTE=true
+#     - ORACLE_PDB=${DB_NAME}
+#     - ORACLE_SID=xe
+     - ORACLE_PWD=${PASSWD}
+#     - ORACLE_CHARACTERSET=AL32UTF8
+#     - ORACLE_DISABLE_ASYNCH_IO=true
+   ports:
+     - ${DB_PORT}:1521
+     - ${HTTP_PORT}:8080
+   restart: "${RESTART}"
+   network_mode: bridge
+
+

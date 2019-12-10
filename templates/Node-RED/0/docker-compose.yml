@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  node-red:
+    image: nodered/node-red:latest
+    restart: always
+    environment:
+      - TZ=${NODE_RED_TIMEZONE}
+    ports:
+      - ${NODE_RED_PORT}:1880
+      - ${MQTT_PORT}:1883
+    network_mode: bridge
+    volumes:
+      - ${USER_DATA}:/data
+    user: root:root
+

@@ -1,0 +1,35 @@
+.catalog:
+  name: ELK
+  version: latest
+  uuid: ELK-0
+  questions:
+  - variable: KIBANA_PORT
+    description: 'Kibana exposed port'
+    label: 'Port:'
+    required: true
+    default: 5601
+    type: int
+  - variable: ES_PORT
+    description: 'Elasticsearch exposed port'
+    label: 'Port:'
+    required: true
+    default: 9200
+    type: int
+  - variable: LS_PORT
+    description: 'Logstash exposed port'
+    label: 'Port:'
+    required: true
+    default: 5044
+    type: int
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string
+  - variable: MAX_MAP_COUNT
+    description: setting maximun docker virtual memory size
+    label: 'Memory:'
+    required: true
+    default: 262144
+    type: int

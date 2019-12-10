@@ -1,0 +1,29 @@
+﻿.catalog:
+  name: Oracle Express Edition 11g
+  version: 11.2.0.1.0
+  uuid: Oraclexe-0
+  questions:
+  - variable: PASSWD
+    description: 'Oracle root password'
+    label: 'password:'
+    required: true
+    default: loopedge-s3cr3t!
+    type: string
+  - variable: DB_PORT
+    description: 'Oracle TNS Listener exposed port'
+    label: 'Port:'
+    required: true
+    default: 1521
+    type: int
+  - variable: HTTP_PORT
+    description: 'Oracle HTTP (APEX) exposed port'
+    label: 'Port:'
+    required: true
+    default: 8080
+    type: int
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure, unless-stopped'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string

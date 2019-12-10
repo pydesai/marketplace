@@ -1,0 +1,4 @@
+name: ubuntu
+description: ubuntu image in quay.io repository
+category: Programming
+version: 1

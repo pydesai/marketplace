@@ -1,0 +1,24 @@
+.catalog:
+  name: Rstudio
+  version: v3.6.1
+  uuid: R
+  questions:
+  - variable: R_PORT
+    description: 'Rstudio exposed port'
+    label: 'Port:'
+    required: true
+    default: 8787
+    type: int
+  - variable: USER_NAME
+    description: 'R studio id'
+    label: 'R studio id:'
+    required: true
+    default: rstudio
+    type: string
+  - variable: R_PASSWORD
+    description: 'R studio password'
+    label: 'R studio password:'
+    required: true
+    default: rstudio1
+    type: string
+ 

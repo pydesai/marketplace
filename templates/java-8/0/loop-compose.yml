@@ -1,0 +1,17 @@
+.catalog:
+  name: java
+  version: 1.8.0.201
+  uuid: java-0
+  questions:
+  - variable: WORKDIR
+    description: 'java project working directory'
+    label: 'java Workdir:'
+    required: true
+    default: "~/"
+    type: string
+  - variable: RESTART
+    description: 'Application restart option: no, always, on-failure'
+    label: 'Restart:'
+    required: true
+    default: "always"
+    type: string

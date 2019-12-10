@@ -1,0 +1,4 @@
+version: '2'
+baseimage:
+  image: quay.io/mjshin/ubuntu:16.04
+  

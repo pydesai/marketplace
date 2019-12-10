@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  thingsboard:
+    image: thingsboard/tb-cassandra
+    volumes:
+      - mytb-data:/data
+      - mytb-logs:/var/log/thingsboard
+    ports:
+      - ${TB_PORT}:9090
+      - ${MQTT_PORT}:1883
+      - ${COAP_PORT}:5683
+    restart: "${RESTART}"
+volumes:
+  mytb-data:
+    driver: local
+  mytb-logs:
+    driver: local
